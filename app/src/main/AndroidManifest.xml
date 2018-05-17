@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pierremichel.breathalyzerskeleton">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="iLit Breathalyzer"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+
+        <service android:name="com.mbientlab.metawear.android.BtleService" />
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/MainTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".newSessionActivity"
+            android:parentActivityName=".MenuActivity"
+            android:label="New Session"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ReadActivity"
+            android:label="ReadActivity"
+            android:parentActivityName=".MenuActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".ResultsActivity"
+            android:parentActivityName=".ReadActivity"
+            android:theme="@style/AppTheme"></activity>
+    </application>
+
+</manifest>

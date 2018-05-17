@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pierremichel.breathalyzerskeleton.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:contentDescription=""
+        app:srcCompat="@drawable/logo"
+        tools:ignore="ContentDescription"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome! Please Log In:"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Username..."
+        android:inputType="textPersonName"
+        tools:ignore="HardcodedText"
+        android:layout_above="@+id/etPassword"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginBottom="22dp" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView4"
+        android:layout_alignStart="@+id/etUsername"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="Password..."
+        android:inputType="textPassword"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/login"
+        tools:ignore="ContentDescription"
+        android:layout_marginBottom="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/bLogin"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_alignStart="@+id/imageView4"
+        android:layout_marginBottom="24dp"
+        android:text="LOG IN"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="65dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/text" />
+
+    <TextView
+        android:id="@+id/tvInvalid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#e80000"
+        android:text="Invalid Login: User does not exist or entered info is incorrect"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_above="@+id/etUsername"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
